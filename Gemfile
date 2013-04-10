@@ -13,10 +13,11 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
+  gem 'therubyracer' 
+  gem 'less-rails'
 
   gem 'uglifier', '>= 1.0.3'
 end
-
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
@@ -24,13 +25,25 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'haml-rails'
 gem 'twitter-bootstrap-rails' 
+gem 'bootstrap-will_paginate'
+gem 'bootstrap-datepicker-rails'
+
 gem 'jquery-rails'
+# gem 'rails_config'
+# gem 'simple_form'
+# gem 'devise'
+# gem 'devise_invitable'
+# gem 'exception_notification'
+# gem 'validates_timeliness'
+
+# gem 'will_paginate'
+
  
 group :development, :test do
- 
+  gem 'factory_girl_rails'
   gem 'rspec-rails'
- 
 end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

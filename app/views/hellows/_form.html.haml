@@ -1,0 +1,25 @@
+= form_for @hellow do |f|
+  - if @hellow.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@hellow.errors.count, "error")} prohibited this hellow from being saved:"
+      %ul
+        - @hellow.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :start_at
+    = f.datetime_select :start_at
+  .field
+    = f.label :end_at
+    = f.datetime_select :end_at
+  .field
+    = f.label :memo
+    = f.text_area :memo
+  .field
+    = f.label :category
+    = f.text_field :category
+  .actions
+    = f.submit 'Save'

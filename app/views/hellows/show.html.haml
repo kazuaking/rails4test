@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @hellow.name
+%p
+  %b Start at:
+  = @hellow.start_at
+%p
+  %b End at:
+  = @hellow.end_at
+%p
+  %b Memo:
+  = @hellow.memo
+%p
+  %b Category:
+  = @hellow.category
+
+= link_to 'Edit', edit_hellow_path(@hellow)
+\|
+= link_to 'Back', hellows_path

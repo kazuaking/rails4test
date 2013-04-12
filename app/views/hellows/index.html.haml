@@ -1,0 +1,27 @@
+%h1 Listing hellows
+
+%table
+  %tr
+    %th Name
+    %th Start at
+    %th End at
+    %th Memo
+    %th Category
+    %th
+    %th
+    %th
+
+  - @hellows.each do |hellow|
+    %tr
+      %td= hellow.name
+      %td= hellow.start_at
+      %td= hellow.end_at
+      %td= hellow.memo
+      %td= hellow.category
+      %td= link_to 'Show', hellow
+      %td= link_to 'Edit', edit_hellow_path(hellow)
+      %td= link_to 'Destroy', hellow, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Hellow', new_hellow_path
